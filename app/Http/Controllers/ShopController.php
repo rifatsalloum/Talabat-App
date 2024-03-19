@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 class ShopController extends Controller
 {
     use GeneralTrait;
+
+    private $isReturned = false;
     /**
      * Display a listing of the resource.
      *
@@ -83,23 +85,28 @@ class ShopController extends Controller
 
                 case "az" :
 
-                    $data =  ($data)? $data->sortBy("name") : Shop::orderBy("name")->get();
+                    $data =  ($this->isReturned)? (($data)? $data->sortBy("name") : $data) :
+                             ( Shop::orderBy("name")->get() );
                     break;
 
                 case "rate":
 
-                    $data =  ($data)? $data->sortByDesc("avg_rate") : Shop::orderBy("avg_rate", "desc")->get();
+                    $data =  ($this->isReturned)? (($data)? $data->sortByDesc("avg_rate") : $data) :
+                             ( Shop::orderBy("avg_rate", "desc")->get() );
                     break;
 
                 default:
-
                     return $data;
 
             }
 
+            $this->isReturned = true;
+
             return $data;
 
         }catch (\Exception $e){
+
+            $this->isReturned = true;
 
             return $data;
 
@@ -109,26 +116,36 @@ class ShopController extends Controller
     {
         try {
 
-        if ($request->cuisine)
-            $data =  ($data)? $data->filter(
+        if ($request->cuisine) {
 
-                function ($one) use ($request){
+            $data = ($this->isReturned) ? (($data) ? $data->filter(
 
-                    return ($cuisine = $one->cuisine) && $cuisine->name == $request->cuisine;
+                function ($one) use ($request) {
+
+                    return ($cuisine = $one->cuisine) && $cuisine->name === $request->cuisine;
 
                 }) :
-                   Shop::query()->whereHas("cuisine",
 
-                       function ($query) use ($request){
+                $data) :
 
-                           $query->where("name",$request->cuisine);
+                (
+                Shop::query()->whereHas("cuisine",
 
-                       })->get();
+                    function ($query) use ($request) {
 
+                        $query->where("name", $request->cuisine);
+
+                    })->get());
+
+            $this->isReturned = true;
+
+        }
 
         return $data;
 
         }catch (\Exception $e){
+
+            $this->isReturned = true;
 
             return $data;
 
@@ -139,13 +156,20 @@ class ShopController extends Controller
 
         try {
 
-            if ($request->rate)
-                $data =  ($data)? $data->where("avg_rate",">=",$request->rate) :
-                       Shop::where("avg_rate",">=",$request->rate)->get();
+            if ($request->rate) {
+
+                $data = ($this->isReturned) ? (($data) ? $data->where("avg_rate", ">=", $request->rate) : $data) :
+                    (Shop::where("avg_rate", ">=", $request->rate)->get());
+
+                $this->isReturned = true;
+
+            }
 
             return $data;
 
         }catch (\Exception $e){
+
+            $this->isReturned = true;
 
             return $data;
 
@@ -156,17 +180,25 @@ class ShopController extends Controller
     {
         try {
 
-            if ($request->free_delivery)
-                $data =  ($data)? $data->filter(function ($one){
+            if ($request->free_delivery) {
+
+                $data = ($this->isReturned) ? (($data) ? $data->filter(function ($one) {
 
                     return $one->delivery_price === 0 || $one->delivery_discount === 100;
 
                 }) :
-                    Shop::where("delivery_price",0)->orWhere("delivery_discount",100)->get();
+                    $data) :
+                    (Shop::where("delivery_price", 0)->orWhere("delivery_discount", 100)->get());
+
+                $this->isReturned = true;
+
+            }
 
             return $data;
 
         }catch (\Exception $e){
+
+            $this->isReturned = true;
 
             return $data;
 
@@ -176,13 +208,20 @@ class ShopController extends Controller
     {
         try {
 
-            if ($request->minutes)
-                $data =  ($data)? $data->where("delivery_time","<",$request->minutes) :
-                       Shop::where("delivery_time","<",$request->minutes)->get();
+            if ($request->minutes) {
+
+                $data = ($this->isReturned) ? (($data) ? $data->where("delivery_time", "<", $request->minutes) : $data) :
+                    (Shop::where("delivery_time", "<", $request->minutes)->get());
+
+                $this->isReturned = true;
+
+            }
 
             return $data;
 
         }catch (\Exception $e){
+
+            $this->isReturned = true;
 
             return $data;
 
@@ -192,13 +231,20 @@ class ShopController extends Controller
     {
         try {
 
-            if ($request->newly_added)
-                $data =  ($data)? $data->sortByDesc("created_at") :
-                       Shop::orderBy("created_at","desc")->get();
+            if ($request->newly_added) {
+
+                $data = ($this->isReturned) ? (($data) ? $data->sortByDesc("created_at") : $data) :
+                    (Shop::orderBy("created_at", "desc")->get());
+
+                $this->isReturned = true;
+
+            }
 
             return $data;
 
         }catch (\Exception $e){
+
+            $this->isReturned = true;
 
             return $data;
 
@@ -208,39 +254,47 @@ class ShopController extends Controller
     {
         try {
 
-            if ($request->type)
-                 $data = ($data)? $data->filter(
+            if ($request->type) {
+
+                $data = ($this->isReturned) ? (($data) ? $data->filter(
 
                     function ($one) use ($request) {
 
                         return ($items = $one->items) && $items->filter(
 
-                            function ($one) use ($request){
+                                function ($one) use ($request) {
 
-                               return ($category = $one->category) && $category->name === $request->type;
+                                    return ($category = $one->category) && $category->name === $request->type;
 
-                            }
-                        )->count() > 0;
+                                }
+                            )->count() > 0;
                     }
-                ) :
+                ) : $data) :
+                    (
                     Shop::query()->whereHas("items",
 
                         function ($query) use ($request) {
 
                             $query->whereHas("category",
 
-                                function ($query) use ($request){
+                                function ($query) use ($request) {
 
-                                    $query->where("name",$request->type);
+                                    $query->where("name", $request->type);
 
                                 }
                             );
                         }
-                    )->get();
+                    )->get());
+
+                $this->isReturned = true;
+
+            }
 
             return $data;
 
         }catch (\Exception $e){
+
+            $this->isReturned = true;
 
             return $data;
 
@@ -252,18 +306,22 @@ class ShopController extends Controller
         try{
 
 
-            if($request->country){
+            if($request->country) {
 
-                $country = Country::where("uuid",$request->country)->firstOrFail();
+                $country = Country::where("uuid", $request->country)->firstOrFail();
 
-                $data = ($data)? $data->where("country_id",$country->id) :
-                        Shop::where("country_id",$country->id)->get();
+                $data = ($this->isReturned) ? (($data) ? $data->where("country_id", $country->id) : $data) :
+                    (Shop::where("country_id", $country->id)->get());
+
+                $this->isReturned = true;
 
             }
 
             return $data;
 
         }catch (\Exception $e){
+
+            $this->isReturned = true;
 
             return $data;
 
