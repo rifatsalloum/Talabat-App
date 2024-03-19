@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\ShopResource;
 use App\Http\Traits\GeneralTrait;
+use App\Models\Country;
 use App\Models\Cuisine;
 use App\Models\Shop;
 use Illuminate\Http\Request;
@@ -47,7 +48,12 @@ class ShopController extends Controller
                                     $this->newlyAdded(
 
                                         $request,
-                                        $this->sellType($request)
+                                        $this->sellType(
+
+                                            $request,
+                                            $this->byCountry($request)
+
+                                        )
 
                                     )
 
@@ -211,7 +217,7 @@ class ShopController extends Controller
 
                             function ($one) use ($request){
 
-                               return ($category = $one->category) && $category->name == $request->type;
+                               return ($category = $one->category) && $category->name === $request->type;
 
                             }
                         )->count() > 0;
@@ -240,6 +246,28 @@ class ShopController extends Controller
 
         }
 
+    }
+    private function byCountry(Request $request,$data = [])
+    {
+        try{
+
+
+            if($request->country){
+
+                $country = Country::where("uuid",$request->country)->firstOrFail();
+
+                $data = ($data)? $data->where("country_id",$country->id) :
+                        Shop::where("country_id",$country->id)->get();
+
+            }
+
+            return $data;
+
+        }catch (\Exception $e){
+
+            return $data;
+
+        }
     }
     /**
      * Store a newly created resource in storage.

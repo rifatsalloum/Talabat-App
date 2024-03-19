@@ -11,6 +11,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\RateController;
 use App\Http\Controllers\ItemRateController;
+use App\Http\Controllers\CuisineController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,6 +29,7 @@ Route::post("signup",[UserController::class,"store"]);
 Route::get("country/all",[CountryController::class,"index"]);
 Route::get("category/all",[ItemCategoryController::class,"index"]);
 Route::get("payment/all",[PaymentController::class,"index"]);
+Route::get("cuisine/all",[CuisineController::class,"index"]);
 
 Route::post("shop/search",[ShopController::class,"search"]);
 Route::post("basket/add",[BasketController::class,"store"]);

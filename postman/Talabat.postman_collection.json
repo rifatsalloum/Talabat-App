@@ -1,0 +1,1713 @@
+{
+	"info": {
+		"_postman_id": "4ea15a0c-c3e7-467c-a312-5745fd745002",
+		"name": "Talabat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31391596"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "me",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "me@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "me1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/signup",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "me",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "me@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "me1234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server}}/signup",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 12:55:21 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"message\": \"user currectly registered\"\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "me@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "me1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/login",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "me@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "me1234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server}}/login",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 12:57:02 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"1|EPoXUirVq7KI91vELN0ZKIiKiSEc5ORkhNgbxGa8ec34628e\",\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|EPoXUirVq7KI91vELN0ZKIiKiSEc5ORkhNgbxGa8ec34628e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/logout",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/logout",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 12:58:05 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"message\": \"logout done\"\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Country",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/country/all",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"country",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/country/all",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"country",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 13:02:40 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"uuid\": \"f75483c7-a465-4221-915f-10e0cbe9b933\",\n            \"name\": \"Syria\",\n            \"image\": \"url\"\n        },\n        {\n            \"uuid\": \"e9b4c9d9-3a4a-466e-b286-3ceb0e288827\",\n            \"name\": \"Lebanon\",\n            \"image\": \"url\"\n        },\n        {\n            \"uuid\": \"90536ffb-b041-44d6-9a20-18b2703c7eab\",\n            \"name\": \"America\",\n            \"image\": \"url\"\n        }\n    ],\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/category/all",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"category",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/category/all",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"category",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 13:01:52 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"uuid\": \"569dc8bc-a22d-4a3c-8798-77c43445f49e\",\n            \"name\": \"food\"\n        },\n        {\n            \"uuid\": \"8437c2c1-655d-40a3-9ab4-751a70a988d1\",\n            \"name\": \"flowers\"\n        }\n    ],\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/payment/all",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"payment",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/payment/all",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"payment",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 13:11:32 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"uuid\": \"da43f55b-5105-48f6-bd5b-3f3dde857c9c\",\n            \"method\": \"paypal\"\n        },\n        {\n            \"uuid\": \"2712cdeb-e95b-4bc6-91c6-6350d6fb8eb7\",\n            \"method\": \"visa card\"\n        }\n    ],\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Shop",
+			"item": [
+				{
+					"name": "search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "food",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sortby",
+									"value": "rate",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "cuisine",
+									"value": "Asian",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "rate",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "free_delivery",
+									"value": "true",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "minutes",
+									"value": "30",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "newly_added",
+									"value": "true",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "country",
+									"value": "86e0f2e4-e45f-4c79-99a2-7a71e921075f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/shop/search",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"shop",
+								"search"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "food",
+											"type": "text"
+										},
+										{
+											"key": "sortby",
+											"value": "rate",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "cuisine",
+											"value": "Asian",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "rate",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "free_delivery",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "minutes",
+											"value": "30",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "newly_added",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server}}/shop/search",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"shop",
+										"search"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 16:38:28 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"uuid\": \"7116cd32-bf54-4e13-a19c-f0f1a7ba2f3c\",\n            \"name\": \"fodo\",\n            \"address\": \"homs alhamra\",\n            \"phone\": \"9384938384\",\n            \"email\": \"fodo@gmail.com\",\n            \"image\": \"url\",\n            \"delivery_price\": \"20 sy\",\n            \"delivery_time\": \"20 mins\",\n            \"delivery_discount\": \"0%\",\n            \"cuisine\": {\n                \"uuid\": \"aaee435e-78f7-4123-bb66-8fe95be0b9f8\",\n                \"name\": \"Asian\"\n            },\n            \"avg_rate\": 0,\n            \"offer\": {\n                \"uuid\": \"1d08ec5c-862d-4f61-9415-6c4fa5afed27\",\n                \"description\": \"save 50% of your menu\",\n                \"type\": \"on_menu\",\n                \"discount\": \"50%\",\n                \"limit\": null,\n                \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n            },\n            \"menu\": [\n                {\n                    \"uuid\": \"aee82d88-cac7-4f18-8ae3-d8f5ef76d71d\",\n                    \"price\": \"10.5 sy\",\n                    \"avg_rate\": 10,\n                    \"trending\": true,\n                    \"item\": {\n                        \"uuid\": \"bf9c7e18-b332-4c26-a866-843542c8b284\",\n                        \"name\": \"soci\",\n                        \"description\": \"chinese food gives fun\"\n                    },\n                    \"attributes\": [\n                        {\n                            \"uuid\": \"439c6f9a-4c52-4586-9b54-de529f40bd16\",\n                            \"value\": {\n                                \"uuid\": \"88122415-8c00-4468-865d-80bbdc637add\",\n                                \"name\": \"small\",\n                                \"attribute\": {\n                                    \"uuid\": \"9d273335-230f-4afa-b7f3-cd2017555538\",\n                                    \"name\": \"size\",\n                                    \"is_required\": true\n                                }\n                            },\n                            \"plus_price\": \"0 sy\"\n                        },\n                        {\n                            \"uuid\": \"349d9d1c-39a2-46b5-b05e-b10300924c68\",\n                            \"value\": {\n                                \"uuid\": \"f24431c6-8b5c-49cb-85cd-91bfc7de3131\",\n                                \"name\": \"well done\",\n                                \"attribute\": {\n                                    \"uuid\": \"9d273335-230f-4afa-b7f3-cd2017555538\",\n                                    \"name\": \"size\",\n                                    \"is_required\": true\n                                }\n                            },\n                            \"plus_price\": \"10 sy\"\n                        }\n                    ],\n                    \"category\": {\n                        \"uuid\": \"8a1322a7-aa5c-437f-a9c7-2aa10fbe9d7e\",\n                        \"name\": \"lunch\"\n                    },\n                    \"quantity\": 2,\n                    \"offer\": {\n                        \"uuid\": \"67cd968f-4141-4e3f-bc02-2e02ce3ff934\",\n                        \"description\": \"save 20% of your item\",\n                        \"type\": \"best_sellers\",\n                        \"discount\": \"20%\",\n                        \"limit\": 2,\n                        \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n                    }\n                },\n                {\n                    \"uuid\": \"b020ff81-0630-4d80-a124-ea22edd772d5\",\n                    \"price\": \"10.5 sy\",\n                    \"avg_rate\": 5,\n                    \"trending\": false,\n                    \"item\": {\n                        \"uuid\": \"57c51ffb-c75b-478b-8e1b-2af968d0bb15\",\n                        \"name\": \"pizza\",\n                        \"description\": \"american food gives fun\"\n                    },\n                    \"attributes\": [],\n                    \"category\": {\n                        \"uuid\": \"8a1322a7-aa5c-437f-a9c7-2aa10fbe9d7e\",\n                        \"name\": \"lunch\"\n                    },\n                    \"quantity\": 2,\n                    \"offer\": {\n                        \"uuid\": \"67cd968f-4141-4e3f-bc02-2e02ce3ff934\",\n                        \"description\": \"save 20% of your item\",\n                        \"type\": \"best_sellers\",\n                        \"discount\": \"20%\",\n                        \"limit\": 2,\n                        \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n                    }\n                }\n            ]\n        },\n        {\n            \"uuid\": \"3bb87376-b48b-4842-9d16-2a556d99aa85\",\n            \"name\": \"be2be\",\n            \"address\": \"homs alhadara\",\n            \"phone\": \"9384938314\",\n            \"email\": \"be2be@gmail.com\",\n            \"image\": \"url\",\n            \"delivery_price\": \"50 sy\",\n            \"delivery_time\": \"30 mins\",\n            \"delivery_discount\": \"100%\",\n            \"cuisine\": {\n                \"uuid\": \"112c89ff-3289-47aa-ad74-bd79b07a0908\",\n                \"name\": \"Est\"\n            },\n            \"avg_rate\": 10.2,\n            \"offer\": null,\n            \"menu\": [\n                {\n                    \"uuid\": \"4d239b7e-53f3-46e4-91a6-f2079a342620\",\n                    \"price\": \"10.5 sy\",\n                    \"avg_rate\": 10,\n                    \"trending\": true,\n                    \"item\": {\n                        \"uuid\": \"57c51ffb-c75b-478b-8e1b-2af968d0bb15\",\n                        \"name\": \"pizza\",\n                        \"description\": \"american food gives fun\"\n                    },\n                    \"attributes\": [\n                        {\n                            \"uuid\": \"b139e8c7-1a76-45b4-9ce7-057afa990eca\",\n                            \"value\": {\n                                \"uuid\": \"b8a0929b-6c03-4f8e-af22-03b069e528b5\",\n                                \"name\": \"red\",\n                                \"attribute\": {\n                                    \"uuid\": \"678efe3b-8ba2-4a34-8086-2507e938fccd\",\n                                    \"name\": \"color\",\n                                    \"is_required\": false\n                                }\n                            },\n                            \"plus_price\": \"5 sy\"\n                        }\n                    ],\n                    \"category\": {\n                        \"uuid\": \"8a1322a7-aa5c-437f-a9c7-2aa10fbe9d7e\",\n                        \"name\": \"lunch\"\n                    },\n                    \"quantity\": 2,\n                    \"offer\": null\n                }\n            ]\n        }\n    ],\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Basket",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : [\n        {\n            \"shop_item_id\" : \"b7a4af7e-9fdd-4e7d-b013-dbea40943573\",\n            \"number\" : 1,\n            \"shop_item_attribute_id\" :\"1d45f0cb-dccb-45e8-9e79-c4bea7547341\",\n            \"notes\" : \"not spicy\"\n\n        },\n        {\n                \"shop_item_id\" : \"b95f07ad-3b12-4ad5-b29f-5fe9668bca4f\",\n                \"number\" : 1,\n                \"shop_item_attribute_id\" : null,\n                \"notes\" : null\n        }\n    ],\n    \"shop_id\" : \"9115d9b8-416c-4653-a899-4927bca5abea\",\n    \"coupon\" : null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/basket/add",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"basket",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\" : [\n        {\n            \"shop_item_id\" : \"b7a4af7e-9fdd-4e7d-b013-dbea40943573\",\n            \"number\" : 1,\n            \"shop_item_attribute_id\" :\"1d45f0cb-dccb-45e8-9e79-c4bea7547341\",\n            \"notes\" : \"not spicy\"\n\n        },\n        {\n                \"shop_item_id\" : \"b95f07ad-3b12-4ad5-b29f-5fe9668bca4f\",\n                \"number\" : 1,\n                \"shop_item_attribute_id\" : null,\n                \"notes\" : null\n        }\n    ],\n    \"shop_id\" : \"9115d9b8-416c-4653-a899-4927bca5abea\",\n    \"coupon\" : null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/basket/add",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"basket",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 00:38:06 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"chart\": [\n            {\n                \"uuid\": \"124ca3f6-f5ab-4389-b067-979932cde123\",\n                \"item\": {\n                    \"uuid\": \"b7a4af7e-9fdd-4e7d-b013-dbea40943573\",\n                    \"price\": \"10.5 sy\",\n                    \"avg_rate\": 10,\n                    \"trending\": true,\n                    \"item\": {\n                        \"uuid\": \"da902a18-6ee1-4295-91c3-8c627c5567ff\",\n                        \"name\": \"soci\",\n                        \"description\": \"chinese food gives fun\"\n                    },\n                    \"attributes\": [\n                        {\n                            \"uuid\": \"1d45f0cb-dccb-45e8-9e79-c4bea7547341\",\n                            \"value\": {\n                                \"uuid\": \"3606aebb-d8e9-4660-aa52-92f2309c2c0c\",\n                                \"name\": \"small\",\n                                \"attribute\": {\n                                    \"uuid\": \"1fdcd84c-693e-42c9-b6ed-9eea29913c61\",\n                                    \"name\": \"size\",\n                                    \"is_required\": true\n                                }\n                            },\n                            \"plus_price\": \"0 sy\"\n                        },\n                        {\n                            \"uuid\": \"267f782a-8683-44c9-adaf-b1a001d15c09\",\n                            \"value\": {\n                                \"uuid\": \"e80ef867-18a9-4193-8d2f-6d4e49d67575\",\n                                \"name\": \"well done\",\n                                \"attribute\": {\n                                    \"uuid\": \"1fdcd84c-693e-42c9-b6ed-9eea29913c61\",\n                                    \"name\": \"size\",\n                                    \"is_required\": true\n                                }\n                            },\n                            \"plus_price\": \"10 sy\"\n                        }\n                    ],\n                    \"category\": {\n                        \"uuid\": \"bb61837f-f014-49e8-af66-8007a5f7da04\",\n                        \"name\": \"lunch\"\n                    },\n                    \"quantity\": 2,\n                    \"offer\": {\n                        \"uuid\": \"6d826290-30a7-4f51-9276-6ab9fec55462\",\n                        \"description\": \"save 20% of your item\",\n                        \"type\": \"best_sellers\",\n                        \"discount\": \"20%\",\n                        \"limit\": 2,\n                        \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n                    }\n                },\n                \"attribute\": null,\n                \"price\": \"8.4 sy\",\n                \"number\": 1,\n                \"notes\": \"not spicy\"\n            },\n            {\n                \"uuid\": \"46ac2d63-5c11-4985-887c-3431e91fc78c\",\n                \"item\": {\n                    \"uuid\": \"b95f07ad-3b12-4ad5-b29f-5fe9668bca4f\",\n                    \"price\": \"10.5 sy\",\n                    \"avg_rate\": 5,\n                    \"trending\": false,\n                    \"item\": {\n                        \"uuid\": \"d3b4f5d0-24a3-401f-8ba1-e007caf50da7\",\n                        \"name\": \"pizza\",\n                        \"description\": \"american food gives fun\"\n                    },\n                    \"attributes\": [],\n                    \"category\": {\n                        \"uuid\": \"bb61837f-f014-49e8-af66-8007a5f7da04\",\n                        \"name\": \"lunch\"\n                    },\n                    \"quantity\": 2,\n                    \"offer\": {\n                        \"uuid\": \"6d826290-30a7-4f51-9276-6ab9fec55462\",\n                        \"description\": \"save 20% of your item\",\n                        \"type\": \"best_sellers\",\n                        \"discount\": \"20%\",\n                        \"limit\": 2,\n                        \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n                    }\n                },\n                \"attribute\": null,\n                \"price\": \"8.4 sy\",\n                \"number\": 1,\n                \"notes\": null\n            }\n        ],\n        \"overall_price\": \"21 sy\",\n        \"item_discount\": \"-4.2 sy\",\n        \"delivery_price\": \"20 sy\",\n        \"delivery_discount\": \"-1 sy\",\n        \"total_price\": \"44.2 sy\",\n        \"menu_discount\": \"-22.1 sy\",\n        \"coupon_discount\": \"0 sy\",\n        \"final_price\": \"22.1 sy\"\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						},
+						{
+							"name": "withUserIn",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\" : [\n        {\n            \"shop_item_id\" : \"b7a4af7e-9fdd-4e7d-b013-dbea40943573\",\n            \"number\" : 1,\n            \"shop_item_attribute_id\" :\"1d45f0cb-dccb-45e8-9e79-c4bea7547341\",\n            \"notes\" : \"not spicy\"\n\n        },\n        {\n                \"shop_item_id\" : \"b95f07ad-3b12-4ad5-b29f-5fe9668bca4f\",\n                \"number\" : 1,\n                \"shop_item_attribute_id\" : null,\n                \"notes\" : null\n        }\n    ],\n    \"shop_id\" : \"9115d9b8-416c-4653-a899-4927bca5abea\",\n    \"coupon\" : null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/basket/add",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"basket",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 00:39:41 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"chart\": [\n            {\n                \"uuid\": \"705936a1-fe70-44ac-966b-c4d60e0967f3\",\n                \"item\": {\n                    \"uuid\": \"b7a4af7e-9fdd-4e7d-b013-dbea40943573\",\n                    \"price\": \"10.5 sy\",\n                    \"avg_rate\": 10,\n                    \"trending\": true,\n                    \"item\": {\n                        \"uuid\": \"da902a18-6ee1-4295-91c3-8c627c5567ff\",\n                        \"name\": \"soci\",\n                        \"description\": \"chinese food gives fun\"\n                    },\n                    \"attributes\": [\n                        {\n                            \"uuid\": \"1d45f0cb-dccb-45e8-9e79-c4bea7547341\",\n                            \"value\": {\n                                \"uuid\": \"3606aebb-d8e9-4660-aa52-92f2309c2c0c\",\n                                \"name\": \"small\",\n                                \"attribute\": {\n                                    \"uuid\": \"1fdcd84c-693e-42c9-b6ed-9eea29913c61\",\n                                    \"name\": \"size\",\n                                    \"is_required\": true\n                                }\n                            },\n                            \"plus_price\": \"0 sy\"\n                        },\n                        {\n                            \"uuid\": \"267f782a-8683-44c9-adaf-b1a001d15c09\",\n                            \"value\": {\n                                \"uuid\": \"e80ef867-18a9-4193-8d2f-6d4e49d67575\",\n                                \"name\": \"well done\",\n                                \"attribute\": {\n                                    \"uuid\": \"1fdcd84c-693e-42c9-b6ed-9eea29913c61\",\n                                    \"name\": \"size\",\n                                    \"is_required\": true\n                                }\n                            },\n                            \"plus_price\": \"10 sy\"\n                        }\n                    ],\n                    \"category\": {\n                        \"uuid\": \"bb61837f-f014-49e8-af66-8007a5f7da04\",\n                        \"name\": \"lunch\"\n                    },\n                    \"quantity\": 2,\n                    \"offer\": {\n                        \"uuid\": \"6d826290-30a7-4f51-9276-6ab9fec55462\",\n                        \"description\": \"save 20% of your item\",\n                        \"type\": \"best_sellers\",\n                        \"discount\": \"20%\",\n                        \"limit\": 2,\n                        \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n                    }\n                },\n                \"attribute\": null,\n                \"price\": \"8.4 sy\",\n                \"number\": 1,\n                \"notes\": \"not spicy\"\n            },\n            {\n                \"uuid\": \"7f0b2f7d-34e2-451e-aebd-65e965f5b36b\",\n                \"item\": {\n                    \"uuid\": \"b95f07ad-3b12-4ad5-b29f-5fe9668bca4f\",\n                    \"price\": \"10.5 sy\",\n                    \"avg_rate\": 5,\n                    \"trending\": false,\n                    \"item\": {\n                        \"uuid\": \"d3b4f5d0-24a3-401f-8ba1-e007caf50da7\",\n                        \"name\": \"pizza\",\n                        \"description\": \"american food gives fun\"\n                    },\n                    \"attributes\": [],\n                    \"category\": {\n                        \"uuid\": \"bb61837f-f014-49e8-af66-8007a5f7da04\",\n                        \"name\": \"lunch\"\n                    },\n                    \"quantity\": 2,\n                    \"offer\": {\n                        \"uuid\": \"6d826290-30a7-4f51-9276-6ab9fec55462\",\n                        \"description\": \"save 20% of your item\",\n                        \"type\": \"best_sellers\",\n                        \"discount\": \"20%\",\n                        \"limit\": 2,\n                        \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n                    }\n                },\n                \"attribute\": null,\n                \"price\": \"8.4 sy\",\n                \"number\": 1,\n                \"notes\": null\n            }\n        ],\n        \"overall_price\": \"21 sy\",\n        \"item_discount\": \"-4.2 sy\",\n        \"delivery_price\": \"20 sy\",\n        \"delivery_discount\": null,\n        \"total_price\": \"45.2 sy\",\n        \"menu_discount\": \"-22.6 sy\",\n        \"coupon_discount\": \"0 sy\",\n        \"final_price\": \"22.6 sy\"\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|RsG0FQdVpokzwAidh0dwRsrRbuzqs9Rpe37cTXxk1b9a6cd8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shop_id",
+									"value": "9115d9b8-416c-4653-a899-4927bca5abea",
+									"type": "text"
+								},
+								{
+									"key": "payment_id",
+									"value": "3ef72b79-9415-4261-a400-690e3b8291cf",
+									"type": "text"
+								},
+								{
+									"key": "deliver_at",
+									"value": "22:00",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "homs-adaoia",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/order/place",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"order",
+								"place"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "shop_id",
+											"value": "7116cd32-bf54-4e13-a19c-f0f1a7ba2f3c",
+											"type": "text"
+										},
+										{
+											"key": "payment_id",
+											"value": "111a9416-de3b-4c4d-9646-7716135a07d8",
+											"type": "text"
+										},
+										{
+											"key": "deliver_at",
+											"value": "2024/09/01",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "homs-adaoia",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server}}/order/place",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"order",
+										"place"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 17:20:39 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"message\": \"order added correctly\"\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|RsG0FQdVpokzwAidh0dwRsrRbuzqs9Rpe37cTXxk1b9a6cd8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/order/all",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"order",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/order/all",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"order",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 19:43:30 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"uuid\": \"d5811d04-04da-454e-9024-165f58d4af1e\",\n            \"shop_id\": {\n                \"uuid\": \"9115d9b8-416c-4653-a899-4927bca5abea\",\n                \"name\": \"fodo\",\n                \"address\": \"homs alhamra\",\n                \"phone\": \"9384938384\",\n                \"email\": \"fodo@gmail.com\",\n                \"image\": \"url\",\n                \"delivery_price\": \"20 sy\",\n                \"delivery_time\": \"20 mins\",\n                \"delivery_discount\": \"0%\",\n                \"cuisine\": {\n                    \"uuid\": \"05dbd9d4-dea6-4f28-ad6a-1b6dbcdaf504\",\n                    \"name\": \"Asian\"\n                },\n                \"avg_rate\": 0,\n                \"offer\": {\n                    \"uuid\": \"0b0a1639-a8b5-4abb-900d-1ea227a7eec6\",\n                    \"description\": \"save 50% of your menu\",\n                    \"type\": \"on_menu\",\n                    \"discount\": \"50%\",\n                    \"limit\": null,\n                    \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n                },\n                \"menu\": [\n                    {\n                        \"uuid\": \"b7a4af7e-9fdd-4e7d-b013-dbea40943573\",\n                        \"price\": \"10.5 sy\",\n                        \"avg_rate\": 10,\n                        \"trending\": true,\n                        \"item\": {\n                            \"uuid\": \"da902a18-6ee1-4295-91c3-8c627c5567ff\",\n                            \"name\": \"soci\",\n                            \"description\": \"chinese food gives fun\"\n                        },\n                        \"attributes\": [\n                            {\n                                \"uuid\": \"1d45f0cb-dccb-45e8-9e79-c4bea7547341\",\n                                \"value\": {\n                                    \"uuid\": \"3606aebb-d8e9-4660-aa52-92f2309c2c0c\",\n                                    \"name\": \"small\",\n                                    \"attribute\": {\n                                        \"uuid\": \"1fdcd84c-693e-42c9-b6ed-9eea29913c61\",\n                                        \"name\": \"size\",\n                                        \"is_required\": true\n                                    }\n                                },\n                                \"plus_price\": \"0 sy\"\n                            },\n                            {\n                                \"uuid\": \"267f782a-8683-44c9-adaf-b1a001d15c09\",\n                                \"value\": {\n                                    \"uuid\": \"e80ef867-18a9-4193-8d2f-6d4e49d67575\",\n                                    \"name\": \"well done\",\n                                    \"attribute\": {\n                                        \"uuid\": \"1fdcd84c-693e-42c9-b6ed-9eea29913c61\",\n                                        \"name\": \"size\",\n                                        \"is_required\": true\n                                    }\n                                },\n                                \"plus_price\": \"10 sy\"\n                            }\n                        ],\n                        \"category\": {\n                            \"uuid\": \"bb61837f-f014-49e8-af66-8007a5f7da04\",\n                            \"name\": \"lunch\"\n                        },\n                        \"quantity\": 2,\n                        \"offer\": {\n                            \"uuid\": \"6d826290-30a7-4f51-9276-6ab9fec55462\",\n                            \"description\": \"save 20% of your item\",\n                            \"type\": \"best_sellers\",\n                            \"discount\": \"20%\",\n                            \"limit\": 2,\n                            \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n                        }\n                    },\n                    {\n                        \"uuid\": \"b95f07ad-3b12-4ad5-b29f-5fe9668bca4f\",\n                        \"price\": \"10.5 sy\",\n                        \"avg_rate\": 5,\n                        \"trending\": false,\n                        \"item\": {\n                            \"uuid\": \"d3b4f5d0-24a3-401f-8ba1-e007caf50da7\",\n                            \"name\": \"pizza\",\n                            \"description\": \"american food gives fun\"\n                        },\n                        \"attributes\": [],\n                        \"category\": {\n                            \"uuid\": \"bb61837f-f014-49e8-af66-8007a5f7da04\",\n                            \"name\": \"lunch\"\n                        },\n                        \"quantity\": 2,\n                        \"offer\": {\n                            \"uuid\": \"6d826290-30a7-4f51-9276-6ab9fec55462\",\n                            \"description\": \"save 20% of your item\",\n                            \"type\": \"best_sellers\",\n                            \"discount\": \"20%\",\n                            \"limit\": 2,\n                            \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n                        }\n                    }\n                ]\n            },\n            \"payment_id\": {\n                \"uuid\": \"3ef72b79-9415-4261-a400-690e3b8291cf\",\n                \"method\": \"paypal\"\n            },\n            \"delivery\": {\n                \"uuid\": \"5e42058f-5946-442f-9839-f5fb20a06ebe\",\n                \"deliver_at\": \"10:00 pm\",\n                \"address\": \"homs-adaoia\",\n                \"price\": \"20 sy\"\n            },\n            \"ordered_items\": [\n                {\n                    \"uuid\": \"5b07d34c-7e03-4f4d-9c8a-5f106d1156f0\",\n                    \"item\": {\n                        \"uuid\": \"b7a4af7e-9fdd-4e7d-b013-dbea40943573\",\n                        \"price\": \"10.5 sy\",\n                        \"avg_rate\": 10,\n                        \"trending\": true,\n                        \"item\": {\n                            \"uuid\": \"da902a18-6ee1-4295-91c3-8c627c5567ff\",\n                            \"name\": \"soci\",\n                            \"description\": \"chinese food gives fun\"\n                        },\n                        \"attributes\": [\n                            {\n                                \"uuid\": \"1d45f0cb-dccb-45e8-9e79-c4bea7547341\",\n                                \"value\": {\n                                    \"uuid\": \"3606aebb-d8e9-4660-aa52-92f2309c2c0c\",\n                                    \"name\": \"small\",\n                                    \"attribute\": {\n                                        \"uuid\": \"1fdcd84c-693e-42c9-b6ed-9eea29913c61\",\n                                        \"name\": \"size\",\n                                        \"is_required\": true\n                                    }\n                                },\n                                \"plus_price\": \"0 sy\"\n                            },\n                            {\n                                \"uuid\": \"267f782a-8683-44c9-adaf-b1a001d15c09\",\n                                \"value\": {\n                                    \"uuid\": \"e80ef867-18a9-4193-8d2f-6d4e49d67575\",\n                                    \"name\": \"well done\",\n                                    \"attribute\": {\n                                        \"uuid\": \"1fdcd84c-693e-42c9-b6ed-9eea29913c61\",\n                                        \"name\": \"size\",\n                                        \"is_required\": true\n                                    }\n                                },\n                                \"plus_price\": \"10 sy\"\n                            }\n                        ],\n                        \"category\": {\n                            \"uuid\": \"bb61837f-f014-49e8-af66-8007a5f7da04\",\n                            \"name\": \"lunch\"\n                        },\n                        \"quantity\": 2,\n                        \"offer\": {\n                            \"uuid\": \"6d826290-30a7-4f51-9276-6ab9fec55462\",\n                            \"description\": \"save 20% of your item\",\n                            \"type\": \"best_sellers\",\n                            \"discount\": \"20%\",\n                            \"limit\": 2,\n                            \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n                        }\n                    },\n                    \"attribute\": {\n                        \"uuid\": \"1d45f0cb-dccb-45e8-9e79-c4bea7547341\",\n                        \"value\": {\n                            \"uuid\": \"3606aebb-d8e9-4660-aa52-92f2309c2c0c\",\n                            \"name\": \"small\",\n                            \"attribute\": {\n                                \"uuid\": \"1fdcd84c-693e-42c9-b6ed-9eea29913c61\",\n                                \"name\": \"size\",\n                                \"is_required\": true\n                            }\n                        },\n                        \"plus_price\": \"0 sy\"\n                    },\n                    \"price\": \"8.4 sy\",\n                    \"number\": 1,\n                    \"notes\": \"not spicy\"\n                },\n                {\n                    \"uuid\": \"bed96f1a-4bea-4c99-b934-cde283c099a0\",\n                    \"item\": {\n                        \"uuid\": \"b95f07ad-3b12-4ad5-b29f-5fe9668bca4f\",\n                        \"price\": \"10.5 sy\",\n                        \"avg_rate\": 5,\n                        \"trending\": false,\n                        \"item\": {\n                            \"uuid\": \"d3b4f5d0-24a3-401f-8ba1-e007caf50da7\",\n                            \"name\": \"pizza\",\n                            \"description\": \"american food gives fun\"\n                        },\n                        \"attributes\": [],\n                        \"category\": {\n                            \"uuid\": \"bb61837f-f014-49e8-af66-8007a5f7da04\",\n                            \"name\": \"lunch\"\n                        },\n                        \"quantity\": 2,\n                        \"offer\": {\n                            \"uuid\": \"6d826290-30a7-4f51-9276-6ab9fec55462\",\n                            \"description\": \"save 20% of your item\",\n                            \"type\": \"best_sellers\",\n                            \"discount\": \"20%\",\n                            \"limit\": 2,\n                            \"expire_date\": \"2024-04-01T00:00:00.000000Z\"\n                        }\n                    },\n                    \"attribute\": null,\n                    \"price\": \"8.4 sy\",\n                    \"number\": 1,\n                    \"notes\": \"spicy\"\n                }\n            ],\n            \"overall_price\": \"22.6sy\",\n            \"ordered_at\": \"8 seconds ago\"\n        }\n    ],\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Rating",
+			"item": [
+				{
+					"name": "shop",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|hxOwbKvbaAJX93ReInU569mXem8Ha05IzSlZt0eRa3ad08dd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shop_id",
+									"value": "7116cd32-bf54-4e13-a19c-f0f1a7ba2f3c",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "beautifull restaurant",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/rate/shop",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"rate",
+								"shop"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "shop",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "shop_id",
+											"value": "7116cd32-bf54-4e13-a19c-f0f1a7ba2f3c",
+											"type": "text"
+										},
+										{
+											"key": "rate",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "beautifull restaurant",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server}}/rate/shop",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"rate",
+										"shop"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 17:37:48 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"message\": \"rating done\"\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "shopItem",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|hxOwbKvbaAJX93ReInU569mXem8Ha05IzSlZt0eRa3ad08dd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shop_item_id",
+									"value": "b020ff81-0630-4d80-a124-ea22edd772d5",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "midum item not so bad",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/rate/shop/item",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"rate",
+								"shop",
+								"item"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "shopItem",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "shop_item_id",
+											"value": "b020ff81-0630-4d80-a124-ea22edd772d5",
+											"type": "text"
+										},
+										{
+											"key": "rate",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "midum item not so bad",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server}}/rate/shop/item",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"rate",
+										"shop",
+										"item"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 17:41:30 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"message\": \"rate added\"\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cuisine",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/cuisine/all",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"cuisine",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/cuisine/all",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"cuisine",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 10:03:51 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"uuid\": \"05dbd9d4-dea6-4f28-ad6a-1b6dbcdaf504\",\n            \"name\": \"Asian\"\n        },\n        {\n            \"uuid\": \"e2f97a2c-3c59-4864-bd1f-50e6ec3affb9\",\n            \"name\": \"Est\"\n        },\n        {\n            \"uuid\": \"f60952d0-bfda-4b2c-b4c9-003b5b7deca9\",\n            \"name\": \"chinese\"\n        }\n    ],\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "talabat.test/api",
+			"type": "string"
+		}
+	]
+}

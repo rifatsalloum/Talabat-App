@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\CuisineResource;
+use App\Http\Traits\GeneralTrait;
 use App\Models\Cuisine;
 use Illuminate\Http\Request;
 
 class CuisineController extends Controller
 {
+    use GeneralTrait;
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +17,19 @@ class CuisineController extends Controller
      */
     public function index()
     {
-        //
+        try{
+
+            return $this->apiResponse(
+
+                CuisineResource::collection( Cuisine::all() )
+
+            );
+
+        }catch (\Exception $e){
+
+            return $this->requiredField($e->getMessage());
+
+        }
     }
 
     /**
