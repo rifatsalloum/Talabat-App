@@ -17,7 +17,7 @@ class DeliveryResource extends JsonResource
     {
         return [
             "uuid" => $this->uuid,
-            "deliver_at" => Carbon::parse($this->deliver_at)->format("g:i a"),
+            "deliver_at" => ($this->deliver_at)? Carbon::parse($this->deliver_at)->format("g:i a") : $this->created_at->format("g:i a"),
             "address" => $this->address,
             "price" => $this->price . " " . $request->coin,
         ];

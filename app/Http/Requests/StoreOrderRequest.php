@@ -29,7 +29,7 @@ class StoreOrderRequest extends FormRequest
     {
         return [
             "address" => "required|string|min:3|max:255",
-            "deliver_at" => "nullable|date_format:H:i|after:8:00|before:23:00",
+            "deliver_at" => "nullable|date_format:H:i",
         ];
     }
     protected function failedValidation(Validator $validator)
