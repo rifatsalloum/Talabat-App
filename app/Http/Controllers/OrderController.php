@@ -57,7 +57,7 @@ class OrderController extends Controller
 
             $baskets = $shop->baskets;
 
-            if(!$baskets)
+            if($baskets->isEmpty())
                 return $this->requiredField("there is no order in the basket");
 
             $user = auth("sanctum")->user();

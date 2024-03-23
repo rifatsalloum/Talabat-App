@@ -110,7 +110,7 @@ class BasketController extends Controller
             $with_menu_dis = $total_price - (($total_price * $menu_discount)/100);
             $with_coupon_dis = $with_menu_dis - (($with_menu_dis * $coupon)/100);
 
-            $shop->basket_price = $with_menu_dis;
+            $shop->basket_price = $with_coupon_dis;
             $shop->save();
 
             $storeBasketRequest["coin"] = $shop->country->coin;
